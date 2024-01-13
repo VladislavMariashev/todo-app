@@ -59,6 +59,5 @@ while True:
     else:
         print("Command not support!")
 print("Bye!")
-.
 
 
