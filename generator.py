@@ -1,13 +1,16 @@
-import random
+import PySimpleGUI as sg
 
-random
-user_input1 = int(input("Enter the lower bound: "))
-user_input2 = int(input("Enter the upper bound: "))
+label1 = sg.Text("Enter feet:")
+input1 = sg.Input()
 
-if user_input1 == user_input2:
-    print("Choose another bounds!")
-elif user_input1 > user_input2:
-    print("The lowest bound higher than upper, opps....")
-else:
-    answer = random.randint(user_input1, user_input2)
-    print(answer)
+label2 = sg.Text("Enter inches:")
+input2 = sg.Input()
+
+compress_button = sg.Button("Convert")
+
+window = sg.Window("Convertor",
+                   layout=[[label1, input1],
+                           [label2, input2],
+                           [compress_button]])
+window.read()
+window.close()
